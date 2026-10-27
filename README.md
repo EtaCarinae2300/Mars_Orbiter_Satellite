@@ -2,16 +2,14 @@
 
 ## Overview
 
-This repository contains a MATLAB simulation of spacecraft attitude dynamics and control for a Low Mars Orbiter (LMO).
+This repository contains a MATLAB simulation of of a Nano-Satellite Orbiting Mars project for ASEN 5010 Attitude Dynamics and Control.
+The project simulates the attitude dynamics and control of a nano-satellite in Low Mars Orbit (LMO), operating alongside a mother spacecraft in Geosynchronous Mars Orbit (GMO). The nano-satellite must autonomously switch between three pointing modes to satisfy its mission requirements:
 
-The project models spacecraft rotational motion using Modified Rodrigues Parameters (MRPs) and implements a proportional-derivative (PD) feedback controller for attitude tracking.
+- **Sun-Pointing:** Orient its solar panels toward the Sun for power generation.
+- **Nadir-Pointing:** Direct its onboard sensor toward the Martian surface for scientific observations.
+- **GMO-Pointing:** Orient its communication antenna toward the mother spacecraft for data transmission.
 
-Three reference-pointing modes are supported:
-- **Sun-Pointing:** Maintain a fixed reference attitude relative to the inertial frame.
-- **Nadir-Pointing:** Orient the spacecraft toward the center of Mars.
-- **GMO-Pointing:** Track a Geosynchronous Mars Orbiter (GMO).
-
-The mission simulation switches between these modes based on the spacecraft's orbital position and the relative geometry of the two orbiters.
+The simulation implements MRP-based attitude kinematics, rigid-body rotational dynamics, RK4 numerical integration, and PD feedback control to achieve these pointing objectives.
 
 ## Dependencies
 
