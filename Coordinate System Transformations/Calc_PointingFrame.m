@@ -71,9 +71,9 @@ switch mode
         w_RN_skew = -((RcN_dt - RN) / dt) * RN';
 
         % Extract angular velocity vector from skew-symmetric matrix
-        w_RN = [w_RN_skew(3,2);
-                w_RN_skew(1,3);
-                w_RN_skew(2,1)];
+        w_RN = RN' * [w_RN_skew(3,2);
+                      w_RN_skew(1,3);
+                      w_RN_skew(2,1)];
 
     otherwise
         error('Invalid pointing mode: %s', mode);
