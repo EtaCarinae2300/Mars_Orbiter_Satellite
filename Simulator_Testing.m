@@ -14,7 +14,7 @@ display(r_inertial_LMO);
 display(v_inertial_LMO);
 
 DCM_O2I_GMO = DCM_O2I(params.GMO, 1150); % We are evaluating for a time of 1150s
-[r_inertial_GMO, v_inertial_GMO] = pos_vel_calc(DCM_O2I_LMO, params.LMO);
+[r_inertial_GMO, v_inertial_GMO] = pos_vel_calc(DCM_O2I_GMO, params.GMO);
 display(r_inertial_GMO);
 display(v_inertial_GMO);
 

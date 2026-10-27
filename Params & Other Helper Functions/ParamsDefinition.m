@@ -1,4 +1,4 @@
-function params = DefineParams()
+function params = ParamsDefinition()
     %% Mars Characteristic Definitions
     params.Mars.mu = 42828.3; % km^3/s^2
     params.Mars.R = 3396.19;  % km
